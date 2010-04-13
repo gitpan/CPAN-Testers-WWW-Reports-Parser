@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 #----------------------------------------------------------------------------
 # Library Modules
@@ -15,10 +15,10 @@ use Carp;
 #----------------------------------------------------------------------------
 # Variables
 
-my $WEB = 'http://nntp.perl.org/perl.cpan.testers/';
+my $WEB = 'http://www.cpantesters.org/cpan/report/';
 my @valid_fields = qw(  id distribution dist distname version distversion perl 
                         state status grade action osname ostext osvers platform 
-                        archname url csspatch cssperl );
+                        archname url csspatch cssperl guid );
 my %valid_fields = map {$_ => 1} @valid_fields;
 
 #----------------------------------------------------------------------------
@@ -148,6 +148,7 @@ sub report {
 
 # transpose legacy field names to current field names
 
+sub guid         { my $self = shift; return $self->{current}->{guid}         }
 sub id           { my $self = shift; return $self->{current}->{id}           }
 sub distribution { my $self = shift; return $self->{current}->{distribution} }
 sub dist         { my $self = shift; return $self->{current}->{distribution} }
@@ -167,7 +168,7 @@ sub osvers       { my $self = shift; return $self->{current}->{osvers}       }
 sub platform     { my $self = shift; return $self->{current}->{platform}     }
 sub archname     { my $self = shift; return $self->{current}->{platform}     }
 
-sub url          { my $self = shift; return $WEB . $self->{current}->{id}    }
+sub url          { my $self = shift; return $WEB . ($self->{current}->{guid} || $self->{current}->{id}) }
 
 sub csspatch     { my $self = shift; return $self->{current}->{csspatch}     }
 sub cssperl      { my $self = shift; return $self->{current}->{cssperl}      }
