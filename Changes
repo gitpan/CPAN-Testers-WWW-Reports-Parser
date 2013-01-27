@@ -1,13 +1,24 @@
 Revision history for the CPAN-Testers-WWW-Reports-Parser distribution
 
-0.03    12/04/2010
-	- added support for guid field.
+0.04    2013-01-27
+        - spelling fixes. (thanks to Florian Schlichting & Gregor Herrmann).
+        - change file dates changed to meet W3CDTF standards.
+        - reworked Makefile.PL for clarity.
+        - License updated to Artistic License v2.0.
+        - added LICENSE file.
+        - added META.json.
+        - reworked test suite.
+        - added reload method.
+        - fixed repeated GLOB loading.
 
-0.02    31/12/2009
-	- Ranguard patched distro to add the ability to return report objects
-	  rather than a hash. Added CPAN::Testers::WWW::Reports::Report module.
-	- minor amendments to Ranguards patches.
-	- added support for the Metabase GUID.
+0.03    2010-04-12
+        - added support for guid field.
 
-0.01    08/06/2009
+0.02    2009-12-31
+        - Ranguard patched distro to add the ability to return report objects
+          rather than a hash. Added CPAN::Testers::WWW::Reports::Report module.
+        - minor amendments to Ranguards patches.
+        - added support for the Metabase GUID.
+
+0.01    2009-06-08
         - Initial release

@@ -33,6 +33,30 @@ Alternatively you may wish to use the CPAN.pm shell or CPANPLUS shell as your
 installer, which will automatically detect uninstalled prerequisities and 
 install those too for you.
 
+CPAN TESTERS FUND
+
+CPAN Testers wouldn't exist without the help and support of the Perl 
+community. However, since 2008 CPAN Testers has grown far beyond the 
+expectations of it's original creators. As a consequence it now requires
+considerable funding to help support the infrastructure.
+
+In early 2012 the Enlightened Perl Organisation very kindly set-up a
+CPAN Testers Fund within their donatation structure, to help the project
+cover the costs of servers and services.
+
+If you would like to donate to the CPAN Testers Fund, please follow the link
+below to the Enlightened Perl Organisation's donation site.
+
+https://members.enlightenedperl.org/drupal/donate-cpan-testers
+
+If your company would like to support us, you can donate financially via the
+fund link above, or if you have servers or services that we might use, please
+send an email to admin@cpantesters.org with details.
+
+Our full list of current sponsors can be found at our I <3 CPAN Testers site.
+
+http://iheart.cpantesters.org
+
 BUGS, PATCHES & FIXES
 
 There are no known bugs at the time of this release. However, if you spot a
@@ -41,7 +65,7 @@ documentation, please submit a bug to the RT system (see link below). However,
 it would help greatly if you are able to pinpoint problems or even supply a 
 patch. 
 
-Fixes are dependant upon their severity and my availablity. Should a fix not
+Fixes are dependent upon their severity and my availability. Should a fix not
 be forthcoming, please feel free to (politely) remind me by sending an email
 to barbie@cpan.org .
 
@@ -49,7 +73,7 @@ RT: http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Testers-WWW-Reports-Pa
 
 COPYRIGHT AND LICENCE
 
-  Copyright (C) 2009 Barbie for Miss Barbell Productions
+  Copyright (C) 2009-2013 Barbie for Miss Barbell Productions
 
-  This package is free software; you can redistribute it and/or 
-  modify it under the same terms as Perl itself.
+  This module is free software; you can redistribute it and/or
+  modify it under the Artistic License 2.0.

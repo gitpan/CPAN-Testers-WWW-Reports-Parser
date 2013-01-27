@@ -1,11 +1,10 @@
 package CPAN::Testers::WWW::Reports::Parser;
 
-use 5.006;
 use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 #----------------------------------------------------------------------------
 # Library Modules
@@ -143,6 +142,11 @@ sub report {
     }
 
     return \%report;
+}
+
+sub reload {
+    my $self = shift;
+    $self->{loaded} = 0;
 }
 
 
@@ -283,6 +287,11 @@ arguments as per filter(), or will used any previously set filter() state.
 Returns a single report data hash. Use filter() to set what field names you
 require, otherwise the default data hash is returned.
 
+=item * reload
+
+The report method cycles round the current data set. If you wish to repeat the
+cycle, call reload to reset to the beginning of the data set.
+
 =back
 
 =head2 Field methods
@@ -378,13 +387,37 @@ the contents of the reports data. If the data ever needs to change, then
 upgrading to the latest release of this distribution, should enable you to
 continue using older, depreciated field names within your code.
 
+=head1 CPAN TESTERS FUND
+
+CPAN Testers wouldn't exist without the help and support of the Perl 
+community. However, since 2008 CPAN Testers has grown far beyond the 
+expectations of it's original creators. As a consequence it now requires
+considerable funding to help support the infrastructure.
+
+In early 2012 the Enlightened Perl Organisation very kindly set-up a
+CPAN Testers Fund within their donatation structure, to help the project
+cover the costs of servers and services.
+
+If you would like to donate to the CPAN Testers Fund, please follow the link
+below to the Enlightened Perl Organisation's donation site.
+
+F<https://members.enlightenedperl.org/drupal/donate-cpan-testers>
+
+If your company would like to support us, you can donate financially via the
+fund link above, or if you have servers or services that we might use, please
+send an email to admin@cpantesters.org with details.
+
+Our full list of current sponsors can be found at our I <3 CPAN Testers site.
+
+F<http://iheart.cpantesters.org>
+
 =head1 BUGS, PATCHES & FIXES
 
 There are no known bugs at the time of this release. However, if you spot a
 bug or are experiencing difficulties, that is not explained within the POD
 documentation, please send bug reports and patches to the RT Queue (see below).
 
-Fixes are dependant upon their severity and my availablity. Should a fix not
+Fixes are dependent upon their severity and my availability. Should a fix not
 be forthcoming, please feel free to (politely) remind me.
 
 RT: http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Testers-WWW-Reports-Parser
@@ -402,9 +435,9 @@ F<http://blog.cpantesters.org/>
 
 =head1 COPYRIGHT AND LICENSE
 
-  Copyright (C) 2009-2010 Barbie <barbie@cpan.org>
+  Copyright (C) 2009-2013 Barbie <barbie@cpan.org>
 
   This module is free software; you can redistribute it and/or
-  modify it under the same terms as Perl itself.
+  modify it under the Artistic License 2.0.
 
 =cut
